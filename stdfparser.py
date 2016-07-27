@@ -292,7 +292,7 @@ class parser:
                 tmp = self.unp('B', buf[0])
                 r.append(tmp & 0x0F)
                 r.append(tmp >> 4)
-                return (r, buf[1])
+                return (r, buf[1:])
         else:
             self.log.critical('_get_Nn: Error format: %s' % format)
             sys.exit(-1)
